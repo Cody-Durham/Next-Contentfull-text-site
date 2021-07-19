@@ -1,6 +1,10 @@
 import { createClient } from 'contentful'
 const contentful = require('contentful')
 
+// getStatic props is reaching out to get info on 'recipe'
+// then were returning the response as a prop
+// then passing that prop to the Recipes function at the bottom
+
 
 
 export async function getStaticProps() {
@@ -18,7 +22,6 @@ export async function getStaticProps() {
       recipes: res.items // these are all the items we get back from the response from 'recipe'
     }
   }
-
 }
 
 
