@@ -1,5 +1,7 @@
 import { createClient } from 'contentful'
-const contentful = require('contentful')
+import RecipeCard from '../components/RecipeCard';
+
+
 
 // getStatic props is reaching out to get info on 'recipe'
 // then were returning the response as a prop
@@ -25,12 +27,15 @@ export async function getStaticProps() {
 }
 
 
-
 export default function Recipes({ recipes }) {
-  console.log('recipes from site', recipes);
+  // console.log('recipes from site', recipes);
   return (
     <div className="recipe-list">
-      Recipe List
+      {recipes.map(recipe => (
+        <div>
+          <RecipeCard key={recipe.sys.id} recipe={recipe}/>
+        </div>
+      ))}
     </div>
   )
 }
