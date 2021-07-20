@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const RecipeCard = ({ recipe }) => {
-    const { title, slug, cookingTime, thumb } = recipe.fields
+    const { title, slug, cookingTime, thumbnail } = recipe.fields
 
     console.log(recipe);
 
@@ -11,9 +11,9 @@ const RecipeCard = ({ recipe }) => {
         <div className="card">
             <div className="thumbnail">
                 <Image 
-                src={'http:' + thumb.fields.file.url}
-                width={thumb.fields.file.details.image.width}
-                height={thumb.fields.file.details.image.height}
+                src={'https:' + thumbnail.fields.file.url}
+                width={thumbnail.fields.file.details.image.width}
+                height={thumbnail.fields.file.details.image.height}
                 />
 
             </div>
