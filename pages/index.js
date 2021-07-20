@@ -36,6 +36,16 @@ export default function Recipes({ recipes }) {
           <RecipeCard key={recipe.sys.id} recipe={recipe}/>
         </div>
       ))}
+      
+      <style jsx>{`
+        .recipe-list {
+        //  border: 2px solid red;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 20px 60px;
+        }
+      `}
+      </style>
     </div>
   )
 }
