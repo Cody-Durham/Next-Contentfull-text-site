@@ -28,7 +28,7 @@ const RecipeCard = ({ recipe }) => {
             </div>
         <style jsx> {`
                  .card {
-                    transform: rotateZ(-1deg);
+                    // transform: rotateZ(-1deg); 
                   }
                   .content {
                     background: #fff;

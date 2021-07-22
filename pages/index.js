@@ -11,7 +11,6 @@ import RecipeCard from '../components/RecipeCard';
 
 export async function getStaticProps() {
  
- 
   const client = createClient ({
     space: process.env.CONTENTFUL_SPACE_ID, // contentful_space_id is in the .env file. 'Process' is a built in method for next.js
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN, // content delivery API - access token (settings -> api)
